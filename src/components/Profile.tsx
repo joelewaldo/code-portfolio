@@ -2,12 +2,14 @@ import React from "react";
 import { profileData } from "../data/profileData";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
+const assetPath = (path: string) => `/code-portfolio${path}`;
+
 const Profile: React.FC = () => {
   return (
     <div className="border border-gray-700 rounded-lg p-4 flex justify-between items-center relative">
       <div className="flex items-center">
         <img
-          src="/assets/extra/pfp.jpg"
+          src={assetPath("/assets/extra/pfp.jpg")}
           alt="Avatar"
           className="rounded-full mr-4 w-32 h-32 object-cover"
         />
