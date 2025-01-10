@@ -7,9 +7,9 @@ const Profile: React.FC = () => {
     <div className="border border-gray-700 rounded-lg p-4 flex justify-between items-center relative">
       <div className="flex items-center">
         <img
-          src="https://avatars.githubusercontent.com/u/67983951?v=4"
+          src="/assets/extra/pfp.jpg"
           alt="Avatar"
-          className="rounded-full mr-4 max-w-[100px] max-h-[100px]"
+          className="rounded-full mr-4 w-32 h-32 object-cover"
         />
         <div>
           <div className="flex items-center">
@@ -19,6 +19,11 @@ const Profile: React.FC = () => {
           </div>
           <div className="mt-2 flex items-center">
             <p className="text-gray-300">📍 {profileData.location}</p>
+          </div>
+          <div className="mb-2 flex items-center">
+            <p className="text-gray-300">
+              🎓 {profileData.degree} @ {profileData.school}
+            </p>
           </div>
           <div className="mt-4">
             <h3 className="text-m font-semibold">Looking to hire me? 💼</h3>

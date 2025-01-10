@@ -5,6 +5,9 @@ export const profileData = {
   github: "https://github.com/joelewaldo",
   linkedin: "https://linkedin.com/in/joel-ewaldo-291523201",
   location: "Irvine, California",
+  degree: "B.S. Software Engineering",
+  school: "University of California, Irvine",
+  graduation: "2025",
   startups: [
     {
       name: "Typo",
