@@ -19,7 +19,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 1,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -32,7 +32,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
   };
 
   return (
-    <div className="project space-y-2">
+    <div className="project space-y-2 mb-4">
       <div className="flex justify-between">
         <h3 className="text-m font-semibold flex items-center">
           {project.name}
@@ -51,21 +51,24 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
           </a>
         )}
       </div>
-      <p className="text-gray-300">{project.description}</p>
+      <p className="text-gray-300 mx-8">{project.description}</p>
       {project.images.length > 0 && (
         <Carousel
           responsive={responsive}
-          swipeable={false}
+          swipeable={true}
           draggable={false}
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={3000}
+          infinite={false}
           centerMode={true}
           containerClass="pt-4 rounded-lg"
           itemClass="px-4"
         >
           {project.images.map((image, index) => (
-            <img key={index} src={image} alt={`${project.name} ${index + 1}`} />
+            <img
+              key={index}
+              src={image}
+              alt={`${project.name} ${index + 1}`}
+              className="max-h-[500px]"
+            />
           ))}
         </Carousel>
       )}
@@ -78,14 +81,14 @@ interface ShowcaseProps {
   works: Project[];
 }
 
-const Showcase = (props: ShowcaseProps) => {
-  return (
-    <Section title={props.title}>
+const Showcase = (props: ShowcaseProps) => (
+  <Section title={props.title}>
+    <div className="container mx-auto px-4">
       {props.works.map((project, index) => (
         <Project key={index} project={project} />
       ))}
-    </Section>
-  );
-};
+    </div>
+  </Section>
+);
 
 export default Showcase;
