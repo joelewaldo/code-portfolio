@@ -12,11 +12,3 @@
     transform: translateX(0);
   }
 }
-
-.animate-dart {
-  animation: dart 2s forwards;
-}
-
-.animate-text {
-  animation: text 2s 2s forwards;
-}
