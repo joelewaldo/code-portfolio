@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Profile from "./components/Profile";
 import Showcase from "./components/Showcase";
 import Background from "./components/Background";
+import ContactForm from "./components/ContactForm";
 
 import { profileData } from "./data/profileData";
 
@@ -19,6 +20,8 @@ const App: React.FC = () => {
           <Showcase title={"startups 🚀"} works={profileData.startups} />
           <div className="my-8"></div>
           <Showcase title={"projects 🛠"} works={profileData.projects} />
+          <div className="my-8"></div>
+          <ContactForm />
         </div>
       </div>
     </div>
