@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://joelewaldo.github.io/code-portfolio/sitemap.xml
+Sitemap: https://your-vercel-domain.vercel.app/sitemap.xml
 
 # Allow crawling of all content
 Crawl-delay: 1

@@ -1,4 +1,4 @@
-const assetPath = (path: string) => `/code-portfolio${path}`;
+const assetPath = (path: string) => path;
 
 export const profileData = {
   name: "Joel Ewaldo",
