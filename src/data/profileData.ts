@@ -13,8 +13,13 @@ export const profileData = {
   startups: [
     {
       name: "Typo",
-      description:
-        "Served as a Backend Developer for Typo, a cutting-edge project creating a crypto coin on the Solana blockchain. The coin is integrated with a network of Twitter bots, each with distinct personalities, capable of mass-replying to tweets. Designed and implemented an internal web platform to control AI-driven bot interactions, enabling seamless management of mass replies and account behavior. Leveraged Docker for deployment efficiency, with a scalable architecture combining a Vercel frontend and Railway backend. The project showcases innovation in AI, blockchain, and social media automation.",
+      description: [
+        "Served as Backend Developer for crypto coin project on Solana blockchain",
+        "Designed internal web platform to control AI-driven Twitter bot interactions",
+        "Enabled mass-reply functionality with distinct bot personalities for social media automation",
+        "Leveraged Docker for deployment with scalable Vercel frontend and Railway backend architecture",
+        "Showcased innovation in AI, blockchain, and social media automation technologies",
+      ],
       images: [
         assetPath("/assets/typo/typo-bot-network-1.png"),
         assetPath("/assets/typo/typo-bot-network-2.png"),
@@ -26,8 +31,13 @@ export const profileData = {
     },
     {
       name: "Statpass",
-      description:
-        "Co-founded and led full-stack development for Statpass, a React Native iOS app focused on delivering a polished and intuitive user experience. Designed and implemented scalable backend APIs using Firebase for data storage and Algolia for efficient search functionality. Built and deployed a visually compelling landing page using Next.js and Tailwind CSS, which significantly boosted user engagement and sign-ups. Played a critical role in launching the app on the iOS App Store, continuously delivering updates and new features to enhance user satisfaction and app performance.",
+      description: [
+        "Co-founded and led full-stack development for React Native iOS app",
+        "Designed scalable backend APIs using Firebase and Algolia for efficient search functionality",
+        "Built compelling landing page with Next.js and Tailwind CSS boosting user engagement",
+        "Successfully launched on iOS App Store with continuous feature updates",
+        "Delivered polished user experience focused on intuitive design and performance",
+      ],
       images: [
         assetPath("/assets/statpass/statpass-website-1.png"),
         assetPath("/assets/statpass/statpass-app-1.png"),
@@ -39,8 +49,13 @@ export const profileData = {
   projects: [
     {
       name: "Custom File Server",
-      description:
-        "Developed a robust custom file server using Flask, providing secure storage and retrieval of images, videos, and personal files. The server was deployed on AWS, with secure communication established via a WireGuard VPN tunnel to ensure encrypted data transmission across devices. Leveraged hashing mechanisms for unique file identification and caching to optimize preview loading times. Designed a 24/7 operational server setup with RAID 1 configuration using dual 8TB drives for data redundancy and reliability.",
+      description: [
+        "Developed robust file server using Flask for secure storage and retrieval of media files",
+        "Deployed on AWS with WireGuard VPN tunnel for encrypted data transmission",
+        "Implemented hashing mechanisms for unique file identification and optimized caching",
+        "Designed 24/7 operational setup with RAID 1 configuration using dual 8TB drives",
+        "Ensured data redundancy and reliability for personal file management",
+      ],
       images: [
         assetPath("/assets/file_server/file-server-1.png"),
         assetPath("/assets/file_server/file-server-2.png"),
@@ -52,8 +67,13 @@ export const profileData = {
     },
     {
       name: "Minesweeper on the Web",
-      description:
-        "Built a modern, interactive Minesweeper game with a seamless user experience using React, TypeScript, HTML, and CSS. Implemented a Depth First Search algorithm to optimize gameplay logic, enhancing performance and responsiveness. Managed the project using GitHub to showcase maintainable and collaborative coding practices, while consistently refining the game's design and functionality.",
+      description: [
+        "Built modern interactive Minesweeper game using React, TypeScript, HTML, and CSS",
+        "Implemented Depth First Search algorithm for optimized gameplay logic and performance",
+        "Managed project with GitHub showcasing maintainable and collaborative coding practices",
+        "Designed seamless user experience with responsive interface and smooth interactions",
+        "Consistently refined game design and functionality for enhanced player engagement",
+      ],
       images: [
         assetPath("/assets/minesweeper/minesweeper-1.png"),
         assetPath("/assets/minesweeper/minesweeper-2.png"),
@@ -63,8 +83,13 @@ export const profileData = {
     },
     {
       name: "Manga Crawler",
-      description:
-        "Created a versatile manga crawler using Python, capable of scraping manga content from various websites and consolidating it into organized PDF files by chapter. Enhanced efficiency through multithreading, allowing simultaneous scraping of multiple chapters. Designed the code modularly to accommodate future updates and variations, ensuring compatibility with different website structures and formats.",
+      description: [
+        "Created versatile manga crawler using Python for content scraping from multiple websites",
+        "Consolidated scraped content into organized PDF files by chapter for easy reading",
+        "Enhanced efficiency through multithreading for simultaneous chapter scraping",
+        "Designed modular code architecture for future updates and website compatibility",
+        "Ensured adaptability to different website structures and formats",
+      ],
       images: [
         assetPath("/assets/manga_crawler/manga-crawler-1.png"),
         assetPath("/assets/manga_crawler/manga-crawler-2.png"),
@@ -75,13 +100,55 @@ export const profileData = {
     },
     {
       name: "Captcha Solver",
-      description:
-        "Designed and implemented a captcha solver using TensorFlow's machine learning models. Manually labeled 1,511 images using LabelImg to create a robust training dataset. Experimented with various TensorFlow Model Zoo architectures, determining Faster RCNN Inception V2 as the optimal model for its accuracy and efficiency. Successfully trained and deployed the model, achieving over 90% accuracy in solving captchas, and generated a detection graph for real-world applications.",
+      description: [
+        "Designed captcha solver using TensorFlow machine learning models with 90%+ accuracy",
+        "Manually labeled 1,511 images using LabelImg to create robust training dataset",
+        "Experimented with TensorFlow Model Zoo architectures, selecting Faster RCNN Inception V2",
+        "Successfully trained and deployed model with detection graph for real-world applications",
+        "Achieved optimal balance of accuracy and efficiency for automated captcha solving",
+      ],
       images: [
         assetPath("/assets/captcha_solver/unsolved_captcha_1.png"),
         assetPath("/assets/captcha_solver/unsolved_captcha_2.png"),
         assetPath("/assets/captcha_solver/solved_captcha_1.jpg"),
       ],
+    },
+  ],
+  experience: [
+    {
+      name: "Language and Learning Analytics Lab - UCI",
+      description: [
+        "Developed interactive web dashboard using Next.js, Bun, React, and Tailwind CSS for AI-collaboration experiment management",
+        "Engineered real-time chat rooms with Flask and Socket.IO for participant and AI agent interactions",
+        "Built Django API endpoints with Clerk authentication and PostgreSQL for secure data storage",
+        "Implemented dynamic experiment workflows assigning participants to control and AI-augmented groups",
+        "Deployed on AWS using 3 EC2 instances and RDS database with Terraform and Ansible automation",
+      ],
+      images: [
+        assetPath("/assets/lala/lala-1.png"),
+        assetPath("/assets/lala/lala-2.png"),
+        assetPath("/assets/lala/lala-3.png"),
+      ],
+      link: "https://sites.uci.edu/lalalab/",
+    },
+  ],
+  freelancing: [
+    {
+      name: "Snowbliss Cafe",
+      description: [
+        "Delivered fully functional catering website within tight 2-day deadline",
+        "Built responsive frontend using Next.js, React, TypeScript, and Tailwind CSS",
+        "Set up PostgreSQL backend on Supabase with comprehensive SQL tables and queries",
+        "Integrated Stripe for secure online payment processing and pre-orders",
+        "Deployed on Railway with real-time menu updates and boosted weekend customer engagement",
+      ],
+      images: [
+        assetPath("/assets/snowbliss/snowbliss-1.png"),
+        assetPath("/assets/snowbliss/snowbliss-2.png"),
+        assetPath("/assets/snowbliss/snowbliss-3.png"),
+        assetPath("/assets/snowbliss/snowbliss-4.png"),
+      ],
+      link: "https://snowbliss.cafe/",
     },
   ],
 };

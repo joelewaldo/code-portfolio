@@ -2,26 +2,47 @@ import React from "react";
 import Header from "./components/Header";
 import Profile from "./components/Profile";
 import Showcase from "./components/Showcase";
-import Background from "./components/Background";
-import ContactForm from "./components/ContactForm";
+import ThreeBackground from "./components/ThreeBackground";
 
 import { profileData } from "./data/profileData";
 
 const App: React.FC = () => {
+  const experienceCount = profileData.experience.length;
+  const freelancingCount = profileData.freelancing.length;
+  const startupsCount = profileData.startups.length;
+
   return (
     <div className="bg-gray-900 text-white flex flex-col min-h-screen relative">
-      <Background />
+      <ThreeBackground />
       <div className="relative z-10">
         <Header />
-        <div className="container mx-auto p-4 max-w-4xl">
+        <div className="container mx-auto p-4 sm:p-6 max-w-4xl">
           <Profile />
         </div>
-        <div className="container mx-auto p-4">
-          <Showcase title={"startups 🚀"} works={profileData.startups} />
-          <div className="my-8"></div>
-          <Showcase title={"projects 🛠"} works={profileData.projects} />
-          <div className="my-8"></div>
-          <ContactForm />
+        <div className="container mx-auto p-4 sm:p-6">
+          <Showcase
+            title={"experience 🎓"}
+            works={profileData.experience}
+            indexOffset={0}
+          />
+          <div className="my-6 sm:my-8"></div>
+          <Showcase
+            title={"freelancing 💼"}
+            works={profileData.freelancing}
+            indexOffset={experienceCount}
+          />
+          <div className="my-6 sm:my-8"></div>
+          <Showcase
+            title={"startups 🚀"}
+            works={profileData.startups}
+            indexOffset={experienceCount + freelancingCount}
+          />
+          <div className="my-6 sm:my-8"></div>
+          <Showcase
+            title={"projects 🛠"}
+            works={profileData.projects}
+            indexOffset={experienceCount + freelancingCount + startupsCount}
+          />
         </div>
       </div>
     </div>

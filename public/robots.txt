@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://joelewaldo.github.io/code-portfolio/sitemap.xml
+
+# Allow crawling of all content
+Crawl-delay: 1
+
+# Disallow crawling of development files
+Disallow: /src/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: *.log 
