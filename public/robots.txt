@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://code-portfolio-pearl.vercel.app/sitemap.xml
+Sitemap: https://www.jewaldo.dev/sitemap.xml
 
 # Allow crawling of all content
 Crawl-delay: 1
