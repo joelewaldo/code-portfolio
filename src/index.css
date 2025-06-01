@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  background-color: #1e293b;
+  overscroll-behavior: none;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: none;
+  }
+}
+
+#root {
+  min-height: 100vh;
+  background-color: #1e293b;
+}
+
 @keyframes text {
   0% {
     opacity: 0;

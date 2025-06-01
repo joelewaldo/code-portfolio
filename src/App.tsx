@@ -12,7 +12,7 @@ const App: React.FC = () => {
   const startupsCount = profileData.startups.length;
 
   return (
-    <div className="bg-gray-900 text-white flex flex-col min-h-screen relative">
+    <div className="bg-gray-900 text-white flex flex-col min-h-screen relative overflow-x-hidden">
       <ThreeBackground />
       <div className="relative z-10">
         <Header />
