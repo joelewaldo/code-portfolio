@@ -2,7 +2,7 @@ import React from "react";
 import { profileData } from "../data/profileData";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-const assetPath = (path: string) => `/code-portfolio${path}`;
+const assetPath = (path: string) => path;
 
 const Profile: React.FC = () => {
   return (
