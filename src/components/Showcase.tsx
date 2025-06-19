@@ -6,6 +6,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 type Project = {
   name: string;
+  jobTitle?: string;
   description: string[];
   images: string[];
   link?: string;
@@ -34,17 +35,19 @@ const Project: React.FC<ProjectProps> = ({ project, isLeft }) => {
 
   return (
     <div
-      className={`project space-y-4 mb-8 flex flex-col md:flex-row ${
-        isLeft ? "md:flex-row" : "md:flex-row-reverse"
+      className={`project space-y-4 mb-8 flex flex-col ${
+        project.images.length > 0 
+          ? `md:flex-row ${isLeft ? "md:flex-row" : "md:flex-row-reverse"}`
+          : ""
       }`}
     >
-      <div className="md:w-1/2 flex flex-col justify-center space-y-3">
+      <div className={`${project.images.length > 0 ? "md:w-1/2" : "w-full max-w-4xl mx-auto"} flex flex-col justify-center space-y-3`}>
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl blur-sm"></div>
           <div className="relative bg-gray-900/40 backdrop-blur-md border border-gray-700/30 rounded-xl p-6 shadow-2xl hover:bg-gray-900/50 hover:border-blue-500/30 transition-all duration-300">
             <div
-              className={`flex ${
-                isLeft ? "justify-start" : "md:justify-end justify-start"
+              className={`flex flex-col ${
+                isLeft ? "items-start" : "md:items-end items-start"
               } mb-4`}
             >
               <h3 className="text-lg sm:text-xl font-semibold flex items-center">
@@ -62,6 +65,11 @@ const Project: React.FC<ProjectProps> = ({ project, isLeft }) => {
                   </a>
                 )}
               </h3>
+              {project.jobTitle && (
+                <p className="text-blue-300 font-medium text-sm mt-1">
+                  {project.jobTitle}
+                </p>
+              )}
             </div>
             <div className="text-sm sm:text-base text-gray-300 leading-relaxed">
               <ul className="space-y-3 list-none">

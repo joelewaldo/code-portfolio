@@ -3,6 +3,7 @@ const assetPath = (path: string) => path;
 export const profileData = {
   name: "Joel Ewaldo",
   title: "Full Stack Software Engineer",
+  currentPosition: "DevOps Intern @ Compassion International",
   email: "jewaldo03@gmail.com",
   github: "https://github.com/joelewaldo",
   linkedin: "https://linkedin.com/in/joel-ewaldo-291523201",
@@ -116,7 +117,21 @@ export const profileData = {
   ],
   experience: [
     {
+      name: "Compassion International",
+      jobTitle: "DevOps Intern",
+      description: [
+        "Currently working as a DevOps Intern contributing to mission-driven technology solutions",
+        "Supporting infrastructure and deployment processes for global child sponsorship platform",
+        "Collaborating with development teams to improve CI/CD pipelines and system reliability",
+        "Gaining hands-on experience with cloud technologies and DevOps best practices",
+        "Contributing to technology that connects sponsors with children in need worldwide",
+      ],
+      images: [],
+      link: "https://www.compassion.com/",
+    },
+    {
       name: "Language and Learning Analytics Lab - UCI",
+      jobTitle: "Software Developer",
       description: [
         "Developed interactive web dashboard using Next.js, Bun, React, and Tailwind CSS for AI-collaboration experiment management",
         "Engineered real-time chat rooms with Flask and Socket.IO for participant and AI agent interactions",

@@ -1,6 +1,5 @@
 import React from "react";
 import { profileData } from "../data/profileData";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const assetPath = (path: string) => path;
 
@@ -26,6 +25,9 @@ const Profile: React.FC = () => {
             <p className="text-gray-300 text-sm">
               🎓 {profileData.degree} @ {profileData.school}
             </p>
+            <p className="text-gray-300 text-sm">
+              💼 {profileData.currentPosition}
+            </p>
           </address>
 
           <div className="text-center">
@@ -41,27 +43,7 @@ const Profile: React.FC = () => {
             </p>
           </div>
 
-          <nav
-            className="flex gap-4 justify-center"
-            aria-label="Social media links"
-          >
-            <a
-              href={profileData.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Joel Ewaldo's GitHub Profile"
-            >
-              <FaGithub className="text-xl hover:text-blue-400 transition-colors duration-200" />
-            </a>
-            <a
-              href={profileData.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Joel Ewaldo's LinkedIn Profile"
-            >
-              <FaLinkedin className="text-xl hover:text-blue-400 transition-colors duration-200" />
-            </a>
-          </nav>
+
         </div>
 
         {/* Desktop Layout - Original */}
@@ -88,6 +70,11 @@ const Profile: React.FC = () => {
                   🎓 {profileData.degree} @ {profileData.school}
                 </p>
               </div>
+              <div className="mb-2 flex items-center">
+                <p className="text-gray-300">
+                  💼 {profileData.currentPosition}
+                </p>
+              </div>
               <div className="mt-4">
                 <h2 className="text-m font-semibold">Looking to hire me? 💼</h2>
                 <p className="text-gray-300">
@@ -102,27 +89,7 @@ const Profile: React.FC = () => {
               </div>
             </div>
           </div>
-          <nav
-            className="flex gap-4 items-center flex-shrink-0"
-            aria-label="Social media links"
-          >
-            <a
-              href={profileData.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Joel Ewaldo's GitHub Profile"
-            >
-              <FaGithub className="text-2xl hover:text-blue-400 transition-colors duration-200" />
-            </a>
-            <a
-              href={profileData.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Joel Ewaldo's LinkedIn Profile"
-            >
-              <FaLinkedin className="text-2xl hover:text-blue-400 transition-colors duration-200" />
-            </a>
-          </nav>
+
         </div>
       </div>
     </section>

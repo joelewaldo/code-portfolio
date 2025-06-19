@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Profile from "./components/Profile";
 import Showcase from "./components/Showcase";
 import ThreeBackground from "./components/ThreeBackground";
+import Footer from "./components/Footer";
 
 import { profileData } from "./data/profileData";
 
@@ -43,6 +44,9 @@ const App: React.FC = () => {
             works={profileData.projects}
             indexOffset={experienceCount + freelancingCount + startupsCount}
           />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6">
+          <Footer />
         </div>
       </div>
     </div>
